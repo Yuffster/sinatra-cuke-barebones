@@ -1,8 +1,10 @@
-Feature: Test Integration
-In order to rely on my systems,
-a developer
-should be able to run tests.
+Feature: view pages
 
-Scenario: Hello, world
-  Given I am on the homepage
-  Then I should see "Hello, world"
+  Scenario: Home page
+    Given I am on the homepage 
+    Then I should see "Hello World"
+  
+  Scenario: Links
+    Given I am on the homepage
+    When I follow "foo"
+    Then I should see "bizz"
